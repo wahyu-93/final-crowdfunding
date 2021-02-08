@@ -149,7 +149,9 @@ class LoginController extends Controller
         ]);
                 
         if (!$token = auth()->attempt($request->only('email', 'password'))){
-            return response(null, 401);
+            return response()->json([
+                'error' => 'Gagal Login'
+            ],401);
         }
 
         $user = User::where('email', request('email'))->first();

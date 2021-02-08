@@ -2225,10 +2225,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: 'App',
   components: {
     Alert: function Alert() {
-      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/alert.vue */ "./resources/js/components/alert.vue"));
+      return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./components/alert */ "./resources/js/components/alert.vue"));
     },
     Search: function Search() {
-      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./components/Search.vue */ "./resources/js/components/Search.vue"));
+      return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./components/Search */ "./resources/js/components/Search.vue"));
+    },
+    Login: function Login() {
+      return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./components/Login */ "./resources/js/components/Login.vue"));
     }
   },
   data: function data() {
@@ -20629,20 +20632,17 @@ var render = function() {
                     [
                       _c(
                         "v-list-item-avatar",
-                        [
-                          _c("v-img", {
-                            attrs: {
-                              src:
-                                "https://randomuser.me/api/portraits/men/78.jpg"
-                            }
-                          })
-                        ],
+                        [_c("v-img", { attrs: { src: _vm.user.user.foto } })],
                         1
                       ),
                       _vm._v(" "),
                       _c(
                         "v-list-item-content",
-                        [_c("v-list-item-title", [_vm._v("John Leider")])],
+                        [
+                          _c("v-list-item-title", [
+                            _vm._v(_vm._s(_vm.user.user.name))
+                          ])
+                        ],
                         1
                       )
                     ],
@@ -20659,7 +20659,12 @@ var render = function() {
                         "v-btn",
                         {
                           staticClass: "mb-1",
-                          attrs: { block: "", color: "primary" }
+                          attrs: { block: "", color: "primary" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setDialogComponent("login")
+                            }
+                          }
                         },
                         [
                           _c("v-icon", { attrs: { left: "" } }, [

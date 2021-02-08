@@ -18,16 +18,16 @@
             <v-list>
                 <v-list-item v-if="!guest">
                     <v-list-item-avatar>
-                        <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+                        <v-img :src="user.user.foto"></v-img>
                     </v-list-item-avatar>
                     
                     <v-list-item-content>
-                        <v-list-item-title>John Leider</v-list-item-title>
+                        <v-list-item-title>{{ user.user.name }}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
 
                 <div class="pa-2" v-if="guest">
-                    <v-btn block color="primary" class="mb-1">
+                    <v-btn block color="primary" class="mb-1" @click="setDialogComponent('login')">
                         <v-icon left>mdi-lock</v-icon>
                         Login
                     </v-btn>
@@ -147,8 +147,9 @@
     export default {
         name: 'App',
         components: { 
-            Alert : () => import('./components/alert.vue'),
-            Search : () => import('./components/Search.vue'),
+            Alert   : () => import('./components/alert'),
+            Search  : () => import('./components/Search'),
+            Login   : () => import('./components/Login')
         },
         data: () => ({
             drawer: false,
