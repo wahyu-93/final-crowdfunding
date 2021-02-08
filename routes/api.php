@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 // });
 
 Route::group([
+    'middleware'=> 'api',
     'prefix'    => 'auth',
 ],function(){
     Route::post('/register', 'LoginController@register');
@@ -25,6 +26,7 @@ Route::group([
     Route::post('/generate-otp', 'LoginController@generateOtp');
     Route::post('/update-password', 'LoginController@updatePassword');
     Route::post('/login', 'LoginController@login');
+    Route::post('/logout','LoginController@logout')->middleware('auth:api');
 });
 
 Route::middleware('auth:api')->group(function(){

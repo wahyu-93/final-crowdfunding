@@ -166,4 +166,14 @@ class LoginController extends Controller
             
         ]);
     }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        return response()->json([
+            'response_code' => '00',
+            'response_message' => 'user berhasil logout',
+        ],200);
+    }
 }
