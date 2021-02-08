@@ -150,7 +150,6 @@
                 { title: 'Home', icon: 'mdi-home', route: '/'},
                 { title: 'Campaigns', icon: 'mdi-hand-heart', route: '/campaigns'},
             ],
-            guest: false,
             dialog: false
         }),
         computed: {
@@ -163,7 +162,9 @@
             // }
 
             ...mapGetters({
-                'transactions' : 'transaction/transactions' // nama modeule->getters
+                transactions : 'transaction/transactions', // nama modeule->getters
+                guest        : 'auth/guest',
+                user         : 'auth/user',
             }),
         },
         methods: {

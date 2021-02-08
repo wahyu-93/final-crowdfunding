@@ -2237,7 +2237,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         icon: 'mdi-hand-heart',
         route: '/campaigns'
       }],
-      guest: false,
       dialog: false
     };
   },
@@ -2246,8 +2245,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return this.$route.path === '/' || this.$route.path === '/home';
     }
   }, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
-    'transactions': 'transaction/transactions' // nama modeule->getters
-
+    transactions: 'transaction/transactions',
+    // nama modeule->getters
+    guest: 'auth/guest',
+    user: 'auth/user'
   })),
   methods: {
     closeDialog: function closeDialog(value) {
@@ -82246,6 +82247,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Stores/auth.js":
+/*!*************************************!*\
+  !*** ./resources/js/Stores/auth.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\resources\\js\\Stores\\auth.js: Unexpected token (7:4)\n\n\u001b[0m \u001b[90m  5 | \u001b[39m    state\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  6 | \u001b[39m       user \u001b[33m:\u001b[39m{}\u001b[33m.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m    mutations\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m        set\u001b[33m:\u001b[39m (state\u001b[33m,\u001b[39m payload) \u001b[33m=>\u001b[39m {\u001b[0m\n    at Parser._raise (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:748:17)\n    at Parser.raiseWithData (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:741:17)\n    at Parser.raise (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Parser.unexpected (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9101:16)\n    at Parser.parseIdentifierName (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11344:18)\n    at Parser.parseIdentifier (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11317:23)\n    at Parser.parseMaybePrivateName (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10645:19)\n    at Parser.parseMember (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10208:63)\n    at Parser.parseSubscript (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10196:19)\n    at Parser.parseSubscripts (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10167:19)\n    at Parser.parseExprSubscripts (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10156:17)\n    at Parser.parseUpdate (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10130:21)\n    at Parser.parseMaybeUnary (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10119:17)\n    at Parser.parseExprOps (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9989:23)\n    at Parser.parseMaybeConditional (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9963:23)\n    at Parser.parseMaybeAssign (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9926:21)\n    at allowInAnd (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9893:39)\n    at Parser.allowInAnd (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11547:12)\n    at Parser.parseMaybeAssignAllowIn (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9893:17)\n    at Parser.parseObjectProperty (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11092:101)\n    at Parser.parseObjPropValue (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11117:100)\n    at Parser.parsePropertyDefinition (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11041:10)\n    at Parser.parseObjectLike (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10931:25)\n    at Parser.parseExprAtom (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10491:23)\n    at Parser.parseExprSubscripts (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10150:23)\n    at Parser.parseUpdate (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10130:21)\n    at Parser.parseMaybeUnary (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:10119:17)\n    at Parser.parseExprOps (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9989:23)\n    at Parser.parseMaybeConditional (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9963:23)\n    at Parser.parseMaybeAssign (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9926:21)\n    at allowInAnd (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9893:39)\n    at Parser.allowInAnd (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11547:12)\n    at Parser.parseMaybeAssignAllowIn (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:9893:17)\n    at Parser.parseObjectProperty (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11092:101)\n    at Parser.parseObjPropValue (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11117:100)\n    at Parser.parsePropertyDefinition (D:\\xampp\\htdocs\\kelasonline\\sanbercode\\crowdfuncding-laravel\\node_modules\\@babel\\parser\\lib\\index.js:11041:10)");
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -82444,6 +82456,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _stores_transaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stores/transaction */ "./resources/js/stores/transaction.js");
 /* harmony import */ var _stores_alert_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/alert.js */ "./resources/js/stores/alert.js");
+/* harmony import */ var _Stores_auth_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Stores/auth.js */ "./resources/js/Stores/auth.js");
+/* harmony import */ var _Stores_auth_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Stores_auth_js__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -82452,7 +82467,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   modules: {
     transaction: _stores_transaction__WEBPACK_IMPORTED_MODULE_2__["default"],
-    alert: _stores_alert_js__WEBPACK_IMPORTED_MODULE_3__["default"]
+    alert: _stores_alert_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+    auth: _Stores_auth_js__WEBPACK_IMPORTED_MODULE_4___default.a
   }
 }));
 
