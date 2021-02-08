@@ -3,7 +3,7 @@ import { startCase } from "lodash"
 export default {
     namespaced: true,
     state: {
-       user :{}.
+       user :{},
     },
 
     mutations: {
