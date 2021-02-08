@@ -12,7 +12,7 @@ export default {
             state.status = status
         },
 
-        setComponent: (state component) => {
+        setComponent: (state, component) => {
             state.component = component
         }
     }, 
