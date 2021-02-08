@@ -193,6 +193,7 @@
                 setDialogComponent  : 'dialog/setComponent',
                 setAuth             : 'auth/set',
                 setAlert            : 'alert/set',
+                checkToken          : 'auth/checkToken',
             }),
 
             logout() {
@@ -219,6 +220,12 @@
                         text    : data.message
                     })
                 })
+            }
+        },
+
+        mounted() {
+            if(this.user){
+                this.checkToken(this.user)
             }
         }
     }

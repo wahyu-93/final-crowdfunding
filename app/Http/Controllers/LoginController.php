@@ -176,4 +176,13 @@ class LoginController extends Controller
             'response_message' => 'user berhasil logout',
         ],200);
     }
+
+    public function checkToken()
+    {
+        return response()->json([
+            'response_code'  => '00',
+            'response_message' => 'token valid',
+            'data' => true
+        ],200);
+    }
 }

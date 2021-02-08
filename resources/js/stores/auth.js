@@ -1,3 +1,4 @@
+import axios from "axios"
 import { startCase } from "lodash"
 
 export default {
@@ -15,6 +16,21 @@ export default {
     actions: { 
         set: ({commit}, payload) => {
             commit(`set`, payload)
+        },
+
+        checkToken: ({commit}, payload) => {
+            let config = {
+                header : {
+                    'Authorization' : 'Bearer '+payload.token,
+                },
+            }   
+            axios.post('/api/auth/check-token', {}, config)
+            .then((response) => {
+                commit('set', payload)
+            })
+            .catch((error) => {
+                commit('set', {})
+            })
         },
     },
 
