@@ -70,7 +70,7 @@
         <v-app-bar app color="success" dark v-if="isHome">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-            <v-toolbar-title>LARAVUEAPP</v-toolbar-title>
+            <v-toolbar-title>Yayasan Sanbercode</v-toolbar-title>
        
             <!-- pemisah konten -->
             <v-spacer></v-spacer>

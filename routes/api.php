@@ -27,7 +27,10 @@ Route::group([
     Route::post('/update-password', 'LoginController@updatePassword');
     Route::post('/login', 'LoginController@login');
     Route::post('/logout','LoginController@logout')->middleware('auth:api');
-    Route::post('/check-token','LoginController@checkToken')->middleware('auth:api');
+    Route::post('/check-token','LoginController@checkToken');
+
+    Route::get('/social/{provider}', 'SocialiteController@redirectToProvider');
+    Route::get('/social/{provider}/callback', 'SocialiteController@handleProviderCallback');
 });
 
 Route::middleware('auth:api')->group(function(){
