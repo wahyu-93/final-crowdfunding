@@ -77,8 +77,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-#File Foto dan Video 
+##File Foto dan Video 
 
-<p align="center">
+<p>
     <a href="https://drive.google.com/drive/folders/1ludkVW5z5pbA9VCg-k4KGfhdljYgeEL6?usp=sharing">File Foto dan Video</a>
 </p>
